@@ -29,7 +29,7 @@ const CustomerTestimonial = () => {
   ];
 
   return (
-    <section className="mx-auto px-4 py-16 bg-[#F7F7F7]">
+    <section className="mx-auto px-4 py-16 bg-[#F7F7F7]" data-aos="zoom-out-up">
       <div className="mb-12 text-center">
         <h2 className="text-[36px] sm:text-[48px] font-bold text-[#000000] px-4 sm:px-8">
           Customer Testimonials
