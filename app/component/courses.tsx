@@ -1,99 +1,98 @@
-import React from "react";
-import { Roboto } from "next/font/google";
 import Image from "next/image";
+import profile3 from "../../public/profile3.png";
+import profile1 from "../../public/profile1.png";
+import profile6 from "../../public/profile6.png";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
+const CustomerTestimonial = () => {
+  const testimonials = [
+    {
+      image: profile3,
+      name: "Joseph Ngumbau",
+      role: "Software Developer",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    },
+    {
+      image: profile1,
+      name: "Erick Kipkemboi",
+      role: "Scrum Master",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    },
+    {
+      image: profile6,
+      name: "Stephen Kerubo",
+      role: "UI/UX Designer",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    },
+  ];
 
-const Courses = () => {
   return (
-    <div
-      className="w-full max-w-[1280px] h-auto flex flex-col justify-center items-center bg-white mt-0 gap-6 px-4 lg:px-8"
-      data-aos="fade-up-left"
-    >
-      {/* Heading */}
-      <h1
-        className={`${roboto.className} font-bold text-[28px] md:text-[36px] lg:text-[48px] text-center mt-16 lg:mt-24`}
-      >
-        Explore Courses By Category
-      </h1>
-      <p
-        className={`${roboto.className} font-normal text-[16px] md:text-[18px] text-center mt-4`}
-      >
-        Discover a wide range of courses covering a variety of subjects, taught
-        by expert instructors.
-      </p>
-
-      {/* Flex Container for Cards */}
-      <div className="w-full flex flex-wrap justify-center gap-6 mt-8 lg:mt-12">
-        {/* First Card (Left aligned) */}
-        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
-          <Image
-            className="flex-shrink-0"
-            src="/tool1.png"
-            alt="tool1"
-            height={40}
-            width={40}
-          />
-          <div>
-            <h1 className={`${roboto.className} text-[16px] md:text-[18px] font-medium`}>
-              Design & Development
-            </h1>
-            <p className={`${roboto.className} text-[14px] md:text-[16px] font-normal`}>
-              50+ Courses Available
+    <section className="mx-auto px-4 py-16 bg-[#F7F7F7]">
+      <div className="mb-12 text-center">
+        <h2 className="text-[36px] sm:text-[48px] font-bold text-[#000000] px-4 sm:px-8">
+          Customer Testimonials
+        </h2>
+        <p className="text-[16px] sm:text-[20px] text-[#000000] mt-4 px-4 sm:px-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 lg:px-10">
+        {testimonials.map((customer, index) => (
+          <div
+            key={index}
+            className="border border-black p-6 rounded-lg bg-white shadow-md"
+          >
+            <div className="flex mb-4 text-[20px] sm:text-[24px] text-black py-2">
+              ★★★★★
+            </div>
+            <p className="text-[14px] sm:text-[16px] text-[#000000] mb-4">
+              {customer.testimonial}
             </p>
+            <div className="flex items-center gap-4 py-4">
+              <Image
+                src={customer.image}
+                alt={customer.name}
+                width={80}
+                height={80}
+                className="rounded-full"
+              />
+              <div>
+                <h3 className="text-[16px] sm:text-[18px] font-bold text-[#000000]">
+                  {customer.name}
+                </h3>
+                <p className="text-[14px] sm:text-[16px] text-[#000000]">
+                  {customer.role}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Second Card (Center aligned) */}
-        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
-          <Image
-            className="flex-shrink-0"
-            src="/volume-high.png"
-            alt="tool2"
-            height={40}
-            width={40}
-          />
-          <div>
-            <h1 className={`${roboto.className} text-[16px] md:text-[18px] font-medium`}>
-              Marketing
-            </h1>
-            <p className={`${roboto.className} text-[14px] md:text-[16px] font-normal`}>
-              50+ Courses Available
-            </p>
-          </div>
-        </div>
-
-        {/* Third Card (Right aligned) */}
-        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
-          <Image
-            className="flex-shrink-0"
-            src="/group.png"
-            alt="tool3"
-            height={40}
-            width={40}
-          />
-          <div>
-            <h1 className={`${roboto.className} text-[16px] md:text-[18px] font-medium`}>
-              Development
-            </h1>
-            <p className={`${roboto.className} text-[14px] md:text-[16px] font-normal`}>
-              50+ Courses Available
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* View All Courses Button */}
-      <div className="w-full flex justify-center mt-8">
-        <button className="w-[155px] h-[48px] border border-black px-4 py-3 text-center hover:bg-slate-100">
-          View All Courses
-        </button>
+      {/* Pagination and Navigation */}
+      <div className="flex justify-between items-center mt-8 px-4 sm:px-8">
+        {/* Left slider */}
+        <Image
+          src="/slider.png"
+          alt="slider"
+          width={50}
+          height={50}
+          className="cursor-pointer"
+        />
+        {/* Right Arrow */}
+        <Image
+            
+          src="/sliderbutton.png"
+          alt="arrow"
+          width={50}
+          height={50}
+          className="cursor-pointer"
+        />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Courses;
+export default CustomerTestimonial;

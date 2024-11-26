@@ -66,7 +66,7 @@ const courses = [
 
 const Mycourses = () => {
   return (
-    <div className="w-full max-w-[1280px] mx-auto bg-[#FFFFFF]" data-aos="zoom-out-up">
+    <div className="max-w-[1280px] mx-auto bg-[#FFFFFF]" data-aos="zoom-out-up">
       {/* Header Section */}
       <h1
         className={`${roboto.className} text-[32px] sm:text-[56px] font-bold text-center mt-9`}
