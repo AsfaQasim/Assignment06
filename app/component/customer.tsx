@@ -24,7 +24,7 @@ const Courses = () => {
       </p>
 
       {/* Grid Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 lg:mt-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-12">
         {/* Individual Cards */}
         {[ 
           { title: "Design & Development", icon: "/tool1.png" },
@@ -39,7 +39,7 @@ const Courses = () => {
         ].map((course, index) => (
           <div
             key={index}
-            className="bg-[#F7F7F7] w-[100%] sm:w-[400px] lg:w-[800px] xl:w-[600px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md"
+            className="bg-[#F7F7F7] w-full h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md"
           >
             <Image
               className="flex-shrink-0"

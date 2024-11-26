@@ -9,7 +9,10 @@ const roboto = Roboto({
 
 const Courses = () => {
   return (
-    <div className="w-full max-w-[1280px] h-auto flex flex-col justify-center items-center bg-white mt-0 gap-6 px-4 lg:px-8" data-aos="fade-up-left">
+    <div
+      className="w-full max-w-[1280px] h-auto flex flex-col justify-center items-center bg-white mt-0 gap-6 px-4 lg:px-8"
+      data-aos="fade-up-left"
+    >
       {/* Heading */}
       <h1
         className={`${roboto.className} font-bold text-[28px] md:text-[36px] lg:text-[48px] text-center mt-16 lg:mt-24`}
@@ -24,10 +27,9 @@ const Courses = () => {
       </p>
 
       {/* Flex Container for Cards */}
-      <div className="w-full flex flex-wrap justify-between gap-6 mt-8 lg:mt-12">
-
+      <div className="w-full flex flex-wrap justify-center gap-6 mt-8 lg:mt-12">
         {/* First Card (Left aligned) */}
-        <div className="bg-[#F7F7F7] w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
+        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
           <Image
             className="flex-shrink-0"
             src="/tool1.png"
@@ -46,7 +48,7 @@ const Courses = () => {
         </div>
 
         {/* Second Card (Center aligned) */}
-        <div className="bg-[#F7F7F7] w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md mx-auto">
+        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
           <Image
             className="flex-shrink-0"
             src="/volume-high.png"
@@ -65,7 +67,7 @@ const Courses = () => {
         </div>
 
         {/* Third Card (Right aligned) */}
-        <div className="bg-[#F7F7F7] w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
+        <div className="bg-[#F7F7F7] w-[350px] md:w-[450px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md">
           <Image
             className="flex-shrink-0"
             src="/group.png"
@@ -82,7 +84,6 @@ const Courses = () => {
             </p>
           </div>
         </div>
-
       </div>
 
       {/* View All Courses Button */}

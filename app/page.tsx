@@ -24,7 +24,6 @@ AOS.init({})
       <Header/>
       <Hero/>
       <Logo/>
-      <Courses/>
       <Achievement/>
       <Customer/>
       <Mycourses/>

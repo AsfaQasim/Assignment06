@@ -59,7 +59,7 @@ export default function Navbar() {
             </div>
 
             {/* responsive navbar */}
-            <div className={`${openSideBar}  md:hidden bg-white/60 backdrop-blur-md absolute top-20 w-screen border-black border-[1px]`}>
+            <div className={`${openSideBar} z-50  md:hidden bg-white/60 backdrop-blur-md absolute top-20 w-screen border-black border-[1px]`}>
                 <div className="flex flex-col justify-between items-center py-5 px-20">
                     <div className="icons flex justify-center items-center gap-4">
                         <Image src={"/images/facebook-app-symbol.png"} alt="fb" height={20} width={20} />
