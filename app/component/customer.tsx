@@ -9,7 +9,10 @@ const roboto = Roboto({
 
 const Courses = () => {
   return (
-    <div className="w-full max-w-[1280px] h-auto flex flex-col justify-center items-center bg-white mt-0 gap-6 px-4 lg:px-8" data-aos="fade-up-left">
+    <div
+      className="w-full max-w-[1280px] h-auto flex flex-col justify-center items-center bg-white mt-0 gap-6 px-6 lg:px-8"
+      data-aos="fade-up-left"
+    >
       {/* Heading */}
       <h1
         className={`${roboto.className} font-bold text-[28px] md:text-[36px] lg:text-[48px] text-center mt-16 lg:mt-24`}
@@ -24,9 +27,9 @@ const Courses = () => {
       </p>
 
       {/* Grid Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 lg:mt-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 lg:mt-12">
         {/* Individual Cards */}
-        {[ 
+        {[
           { title: "Design & Development", icon: "/tool1.png" },
           { title: "Marketing", icon: "/volume-high.png" },
           { title: "Development", icon: "/group.png" },
@@ -35,11 +38,11 @@ const Courses = () => {
           { title: "Self Development", icon: "/arrow.png" },
           { title: "Business", icon: "/briefcase.png" },
           { title: "Finance", icon: "/book1.png" },
-          { title: "Consulting", icon: "/book.png" }
+          { title: "Consulting", icon: "/book.png" },
         ].map((course, index) => (
           <div
             key={index}
-            className="bg-[#F7F7F7] w-[100%] sm:w-[400px] lg:w-[800px] xl:w-[600px] h-auto flex items-center gap-4 px-6 py-6 shadow-sm rounded-md"
+            className="bg-[#F7F7F7] w-full sm:w-[400px] lg:w-[300px] xl:w-[350px] h-auto flex items-center gap-4 px-12 py-6 shadow-sm rounded-md"
           >
             <Image
               className="flex-shrink-0"
