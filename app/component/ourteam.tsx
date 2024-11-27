@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
@@ -51,24 +52,21 @@ const Ourteam = () => {
   return (
     <div className="data-aos=zoom-out-left">
       {/* Header Section */}
-      <div className="w-full mx-auto bg-[#FFFFFF] mt-[150px] px-4">
+      <div className=" w-screen md:w-[1280px] mx-auto bg-[#FFFFFF] mt-[150px]">
         <h1
-          className={`${roboto.className} text-[56px] font-bold text-center mt-9`}
+          className={`${roboto.className} w-full text-[56px] font-bold flex text-center justify-center mt-9`}
         >
           Our Team
         </h1>
         <p
-          className={`${roboto.className} font-normal text-[18px] leading-[27px] text-center`}
+          className={`${roboto.className} font-normal text-[18px] leading-[27px] flex justify-center text-center`}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
 
       {/* Team Members Section */}
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-20 justify-items-center px-4"
-        data-aos="zoom-out"
-      >
+      <div className="grid grid-cols-3 gap-12 mt-20 justify-items-center" data-aos="zoom-out">
         {teamMembers.map((member, index) => (
           <div key={index} className="text-center">
             <Image
@@ -87,14 +85,13 @@ const Ourteam = () => {
               {member.position}
             </p>
             {/* Icons Section */}
-            {member.social && ( // Show icons only if social links exist
-              <div className="flex justify-center gap-4 mt-6">
+            {index < 3 && member.social && ( // Show icons only for the first 3 members
+              <div className="flex justify-center gap-4 mt-12">
                 {member.social.linkedin && (
                   <a
                     href={member.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn"
                   >
                     <FaLinkedin className="text-gray-600 text-[20px] hover:text-gray-400" />
                   </a>
@@ -104,7 +101,6 @@ const Ourteam = () => {
                     href={member.social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Twitter"
                   >
                     <FaTwitter className="text-gray-600 text-[20px] hover:text-gray-400" />
                   </a>
@@ -114,7 +110,6 @@ const Ourteam = () => {
                     href={member.social.dribbble}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Dribbble"
                   >
                     <FaDribbble className="text-gray-600 text-[20px] hover:text-gray-400" />
                   </a>
