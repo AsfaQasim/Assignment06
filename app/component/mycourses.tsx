@@ -104,7 +104,7 @@ const Mycourses = () => {
               <h1 className="text-sm sm:text-[16px]">{course.category}</h1>
               <Image
                 className="w-[48px] h-[24px]"
-                src="/star.png"
+                src="/Star.png"
                 alt="star"
                 width={48}
                 height={24}
